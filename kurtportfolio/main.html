@@ -1,164 +1,60 @@
+<!-- HTML Structure -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kurt Angelo Molina - Professional Tennis Coach & Former UP Diliman Varsity Player">
+    <meta name="description"
+        content="Kurt Angelo Molina - Professional Tennis Coach & Former UP Diliman Varsity Player">
     <title>Kurt Angelo Molina - Tennis Coach Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="tennis-ball" id="tennisBall"></div>
+    <!-- Animated Tennis Ball -->
+    <div id="bouncing-ball">
+        <img src="assets/images/tennis.png" alt="Tennis Ball" />
+    </div>
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#journey">Journey</a></li>
-            <li><a href="#coaching">Coaching</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Rain Background Container -->
+    <div class="container"></div>
 
-    <section class="hero" id="home">
-        <div class="court-lines">
-            <div class="baseline"></div>
-            <div class="service-line"></div>
-            <div class="center-line"></div>
-        </div>
-        <div class="hero-content">
-            <div class="profile-image-container">
-                <img src="assets/images/portfolio.jpg" alt="Kurt Angelo Molina" class="profile-image">
-            </div>
-            <h1>Kurt Angelo Molina</h1>
-            <p class="tagline">Professional Tennis Coach</p>
-            <p class="subtitle">Former UP Diliman Varsity Player | Mentor | Athlete</p>
-            <p>Transforming passion into purpose through tennis. I guide young athletes to excellence on and off the court, building champions through discipline, strategy, and heart.</p>
-            <a href="#contact" class="cta-button">Get in Touch</a>
-        </div>
-    </section>
+    <!-- Dynamic Includes -->
+    <div id="nav-include" data-file="section/nav.html"></div>
+    <div id="home-include" data-file="section/home.html"></div>
+    <div id="about-include" data-file="section/about.html"></div>
+    <div id="projects-include" data-file="section/projects.html"></div>
+    <div id="contact-include" data-file="section/contact.html"></div>
+    <div id="footer-include" data-file="section/footer.html"></div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="about-card">
-                <h3>🏠 Roots in Paracale</h3>
-                <p>Born on December 10, 2000, in Paracale, where I completed my elementary education at Paracale Elementary School and high school at Paracale National High School. My journey then led me to Naga City for Senior High School at the University of Nueva Caceres.</p>
-            </div>
-            <div class="about-card">
-                <h3>🎓 Academic & Athletic Balance</h3>
-                <p>Recruited as a varsity tennis player at the University of the Philippines-Diliman, I spent two years balancing rigorous academics with competitive athletics. Currently pursuing my degree at Camarines Norte State College.</p>
-            </div>
-            <div class="about-card">
-                <h3>📚 Beyond the Court</h3>
-                <p>I'm passionate about historical fiction, which sharpens my focus and provides valuable perspectives on strategy and leadership—skills I bring into both teaching and playing tennis.</p>
-            </div>
-        </div>
-
-        <div class="journey-section">
-            <h3 style="color: var(--ball-yellow); text-align: center; font-size: 2rem; margin-bottom: 2rem;">My Tennis Journey</h3>
-            <div class="journey-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-icon">🏫</div>
-                    <div class="timeline-content">
-                        <h4>Educational Foundation</h4>
-                        <p>Started in Paracale, progressing through elementary and high school, then moved to Naga City for Senior High School at Universidad de Nueva Caceres, where my tennis skills began to flourish.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">🏆</div>
-                    <div class="timeline-content">
-                        <h4>UP Diliman Varsity Player</h4>
-                        <p>Recruited to play for one of the Philippines' premier universities. Two years of intense training and competition taught me discipline, teamwork, and resilience—values that define my coaching philosophy today.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-icon">🎾</div>
-                    <div class="timeline-content">
-                        <h4>Transition to Coaching</h4>
-                        <p>After the pandemic, I returned home and discovered my true calling: coaching. Now at Camarines Norte State College, I balance my studies while mentoring the next generation of tennis players across multiple schools.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="coaching">
-        <h2>Coaching Philosophy</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>🎯 Technical Excellence</h3>
-                <ul>
-                    <li>Fundamentals & Form</li>
-                    <li>Shot Selection Strategy</li>
-                    <li>Footwork & Positioning</li>
-                    <li>Match Play Tactics</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>💪 Physical Development</h3>
-                <ul>
-                    <li>Strength & Conditioning</li>
-                    <li>Agility Training</li>
-                    <li>Endurance Building</li>
-                    <li>Injury Prevention</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>🧠 Mental Game</h3>
-                <ul>
-                    <li>Focus & Concentration</li>
-                    <li>Competitive Mindset</li>
-                    <li>Pressure Management</li>
-                    <li>Goal Setting</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h3>🌟 Character Building</h3>
-                <ul>
-                    <li>Discipline & Work Ethic</li>
-                    <li>Sportsmanship</li>
-                    <li>Leadership Skills</li>
-                    <li>Confidence Development</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="about-card" style="margin-top: 3rem;">
-            <h3>Why I Coach</h3>
-            <p>Coaching is more than a profession for me—it's a calling. It allows me to stay connected to the sport I love while helping others grow. I coach students across various schools, guiding them not just in improving their game but also in developing discipline, sportsmanship, and confidence. What I value most is not just the livelihood it provides, but the fulfillment of mentoring young athletes and witnessing their progress both on and off the court.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="contact">
-            <h2>Let's Connect</h2>
-            <p>Whether you're looking for tennis coaching, want to discuss training programs, or simply share your passion for the sport, I'd love to hear from you. Let's work together to develop champions!</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span>📧</span>
-                    <div>kurtangelo.molina@example.com</div>
-                </div>
-                <div class="contact-item">
-                    <span>📱</span>
-                    <div>Available for coaching inquiries</div>
-                </div>
-                <div class="contact-item">
-                    <span>📍</span>
-                    <div>Camarines Norte, Philippines</div>
-                </div>
-                <div class="contact-item">
-                    <span>💼</span>
-                    <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">LinkedIn Profile</a>
-                </div>
-                <div class="contact-item">
-                    <span>💻</span>
-                    <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">GitHub Profile</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- JavaScript Files -->
     <script src="script.js"></script>
+    <script src="nav.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800, // animation duration in milliseconds
+            once: true     // only animate once when scrolling
+        });
+    </script>
 </body>
+
 </html>
