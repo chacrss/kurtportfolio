@@ -1,0 +1,297 @@
+/* CSS Variables */
+:root {
+  --ball-yellow: #fbbf24;
+  --court-green: #1a472a;
+  --court-green-light: #2d5a3d;
+  --accent-green: #4ade80;
+  --text-light: #e2e8f0;
+  --text-muted: #cbd5e1;
+}
+
+/* About Section */
+#about {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #0f1419, #1a2332);
+  color: var(--text-light);
+}
+
+#about h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: -1px;
+  animation: slideInDown 0.8s ease-out;
+}
+
+/* About Cards */
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+
+.about-card {
+  background: linear-gradient(
+    135deg,
+    rgba(45, 90, 61, 0.4) 0%,
+    rgba(26, 71, 42, 0.4) 100%
+  );
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: 12px;
+  padding: 40px 30px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.about-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.about-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.about-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(74, 222, 128, 0.5);
+  background: linear-gradient(
+    135deg,
+    rgba(45, 90, 61, 0.6) 0%,
+    rgba(26, 71, 42, 0.6) 100%
+  );
+  box-shadow: 0 20px 40px rgba(74, 222, 128, 0.1);
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--accent-green);
+}
+
+.about-card p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* Journey Section */
+.journey-section {
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+}
+
+.journey-section h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+/* Timeline */
+.journey-timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.journey-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent-green), transparent);
+  top: 0;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 50px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.timeline-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.timeline-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.timeline-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.timeline-item:nth-child(odd) {
+  flex-direction: row;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.timeline-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--accent-green), #22c55e);
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 25px rgba(74, 222, 128, 0.3);
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-content {
+  flex: 1;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  padding-right: 50px;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  padding-left: 50px;
+  text-align: left;
+}
+
+.timeline-content h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--ball-yellow);
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #about {
+    padding: 60px 20px;
+  }
+
+  #about h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .about-content {
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .about-card {
+    padding: 30px 20px;
+  }
+
+  .journey-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .journey-timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column !important;
+    margin-bottom: 40px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    padding: 20px 0 0 80px !important;
+    text-align: left !important;
+  }
+
+  .timeline-icon {
+    position: absolute;
+    left: -20px;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+
+  .timeline-content h4 {
+    font-size: 1.2rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #about {
+    padding: 40px 15px;
+  }
+
+  #about h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .about-card {
+    padding: 25px 15px;
+  }
+
+  .about-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-card p {
+    font-size: 0.95rem;
+  }
+
+  .journey-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .journey-timeline::before {
+    left: 15px;
+  }
+
+  .timeline-icon {
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    padding-left: 60px !important;
+  }
+
+  .timeline-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+}

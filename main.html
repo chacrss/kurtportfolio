@@ -1,0 +1,64 @@
+<!-- HTML Structure -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kurt Angelo Molina - Professional Tennis Coach & Former UP Diliman Varsity Player">
+
+
+    <title>Kurt Angelo Molina Portfolio</title>
+
+    <!-- CSS Stylesheets -->
+    <link rel="icon" type="image/jpeg" href="assets/images/kurt.jpeg">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Animated Tennis Ball -->
+    <div id="bouncing-ball">
+        <img src="assets/images/tennis.png" alt="Tennis Ball" />
+    </div>
+
+    <!-- Rain Background Container -->
+    <div class="container"></div>
+
+    <!-- Dynamic Includes -->
+    <div id="nav-include" data-file="section/nav.html"></div>
+    <div id="home-include" data-file="section/home.html"></div>
+    <div id="about-include" data-file="section/about.html"></div>
+    <div id="projects-include" data-file="section/projects.html"></div>
+    <div id="contact-include" data-file="section/contact.html"></div>
+    <div id="footer-include" data-file="section/footer.html"></div>
+
+    <!-- JavaScript Files -->
+    <script src="script.js"></script>
+    <script src="nav.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+
+</html>
